@@ -83,6 +83,25 @@ This project demonstrates:
 - **Hallucination-adjacent research** — understanding how fine-tuning affects model confidence and output reliability
 - **Scalable training patterns** — applicable to larger models (LLaMA, Mistral) with same PEFT approach
 
+## Project Structure
+
+llm-finetuning-sentiment/
+├── train.py # LoRA fine-tuning script
+├── evaluate.py # Inference + evaluation on new samples
+├── requirements.txt # Pinned dependencies for reproducibility
+├── .gitignore # Excludes venv, model weights, cache
+└── README.md # Project documentation
+
+## Run Inference
+
+After training, evaluate the model on sample texts:
+
+```bash
+python evaluate.py
+```
+
+Runs prediction on 8 diverse test samples and enters interactive mode where you can type any text and get sentiment prediction with confidence scores.
+
 ## Author
 
 Sri Durga Abhigna Tanguturi
